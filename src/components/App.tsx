@@ -1,12 +1,11 @@
 import { Fragment } from "react";
-import { Input, Radiogroup, Button } from "./Common/index";
+import { Checkbox, Input, Radiogroup, Button } from "./common";
 
 const tasks = [
     { id: 1, label: 'Выучить JS', isDone: true },
     { id: 2, label: 'Выучить React', isDone: false },
     { id: 3, label: 'Сделать домашку', isDone: true },
     { id: 4, label: 'Сделать проект', isDone: false },
-    { id: 5, label: 'Устроиться на работу', isDone: false },
 ];
 
 const filters = [
@@ -20,7 +19,7 @@ let filterState: string = 'All';
 export const App = () => {
     return (
         <Fragment>
-            <Input type="text" placeholder="title"></Input>
+            <Input placeholder="title" value="" />
             <Button onClick={() => console.log("Добавил")}>Add task</Button>
             <ul>{tasks
                 .filter((item): boolean => {
@@ -34,7 +33,7 @@ export const App = () => {
                 })
                 .map(item =>
                     <li key={item.id}>
-                        <Input type="checkbox" checked={item.isDone} />
+                        <Checkbox checked={item.isDone} />
                         {item.label}
                         {item.isDone ? <Button onClick={() => console.log("Удалил " + item.label)}>Delete</Button> : null}
                     </li>)}

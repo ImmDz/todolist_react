@@ -3,7 +3,6 @@ import type { FC, PropsWithChildren } from 'react';
 
 interface ButtonProps {
     disabled?: boolean;
-    type?: 'alert' | 'submit';
     onClick: () => void;
 }
 

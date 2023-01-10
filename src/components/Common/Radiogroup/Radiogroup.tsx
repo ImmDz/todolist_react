@@ -14,6 +14,7 @@ export const Radiogroup: FC<RadiogroupProps> = (props) => {
                     <input
                         id={item.id}
                         type="radio"
+                        name={props.name}
                         value={item.value}
                         checked={item.value === props.value} />
                     <label htmlFor={item.id}>{item.label}</label>

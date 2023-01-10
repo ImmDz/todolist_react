@@ -1,3 +1,4 @@
-export { Radiogroup } from "./Radiogroup/Radiogroup";
-export { Button } from "./Button/Button";
-export { Input } from "./Input/Input";
+export { Radiogroup } from "./Radiogroup";
+export { Button } from "./Button";
+export { Input } from "./Input";
+export { Checkbox } from "./Checkbox"
